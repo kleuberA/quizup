@@ -23,6 +23,7 @@ export default function QuestionsComponent() {
                     options={currentQuestion.options}
                     answer={currentQuestion.answer}
                     onNext={handleNextQuestion}
+                    currentIndex={currentQuestionIndex + 1}
                 />
             )}
             {currentQuestionIndex === Questions.length && (
