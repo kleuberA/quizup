@@ -1,18 +1,18 @@
 "use client"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import Link from "next/link";
-import { z } from "zod";
-import toast from "react-hot-toast";
+import Loader from "@/components/Loader";
+
+import { zodResolver } from "@hookform/resolvers/zod";
 import useSupabase from "@/hooks/use-supabase";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
+import toast from "react-hot-toast";
 import { useState } from "react";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import Loader from "@/components/Loader";
+import Link from "next/link";
+import { z } from "zod";
 
 const FormSchema = z.object({
     email: z.string().email(),
