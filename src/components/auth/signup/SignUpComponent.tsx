@@ -1,5 +1,6 @@
 "use client"
-import { Button } from "@/components/ui/button";
+
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import {
     Card,
     CardContent,
@@ -7,18 +8,18 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Button } from "@/components/ui/button";
+import useSupabase from "@/hooks/use-supabase";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { useRouter } from "next/navigation";
+import { useForm } from "react-hook-form";
+import Loader from "@/components/Loader";
+import toast from "react-hot-toast";
+import { useState } from "react";
 import Link from "next/link";
 import { z } from "zod";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import useSupabase from "@/hooks/use-supabase";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-import toast from "react-hot-toast";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import Loader from "@/components/Loader";
+
 
 const FormSchema = z.object({
     name: z.string().min(3, { message: "Name must be at least 3 characters." }),
