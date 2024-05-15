@@ -19,6 +19,7 @@ import toast from "react-hot-toast";
 import { useState } from "react";
 import Link from "next/link";
 import { z } from "zod";
+import isAuthenticated from "@/hooks/isAuthenticated";
 
 
 const FormSchema = z.object({
@@ -32,6 +33,8 @@ const FormSchema = z.object({
 })
 
 export default function SignUpComponent() {
+
+    isAuthenticated();
 
     const [loading, setLoading] = useState(false);
     const router = useRouter();

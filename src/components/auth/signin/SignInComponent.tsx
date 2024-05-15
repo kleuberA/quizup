@@ -13,6 +13,7 @@ import toast from "react-hot-toast";
 import { useState } from "react";
 import Link from "next/link";
 import { z } from "zod";
+import isAuthenticated from "@/hooks/isAuthenticated";
 
 const FormSchema = z.object({
     email: z.string().email(),
@@ -21,8 +22,9 @@ const FormSchema = z.object({
 
 export default function SignInComponent() {
 
-    const [loading, setLoading] = useState(false);
+    isAuthenticated();
 
+    const [loading, setLoading] = useState(false);
     const supabase = useSupabase();
     const router = useRouter();
 
