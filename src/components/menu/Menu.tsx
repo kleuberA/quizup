@@ -1,5 +1,6 @@
-import Link from "next/link";
 import { ToggleTheme } from "../toggle-theme";
+import User from "../user/User";
+import Link from "next/link";
 
 export default function Menu() {
     return (
@@ -11,8 +12,9 @@ export default function Menu() {
                         <span className="bg-primary p-2 rounded-sm text-accent group-hover:bg-secondary group-hover:text-accent-foreground transition-all duration-300">UP</span>
                     </Link>
                 </div>
-                <div className="flex flex-row gap-5">
+                <div className="flex flex-row gap-2">
                     <ToggleTheme />
+                    <User />
                 </div>
             </div>
         </nav>
