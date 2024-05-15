@@ -9,6 +9,7 @@ import {
     CardTitle,
 } from "@/components/ui/card";
 import { zodResolver } from "@hookform/resolvers/zod";
+import isAuthenticated from "@/hooks/isAuthenticated";
 import { Button } from "@/components/ui/button";
 import useSupabase from "@/hooks/use-supabase";
 import { Input } from "@/components/ui/input";
@@ -19,7 +20,6 @@ import toast from "react-hot-toast";
 import { useState } from "react";
 import Link from "next/link";
 import { z } from "zod";
-import isAuthenticated from "@/hooks/isAuthenticated";
 
 
 const FormSchema = z.object({
