@@ -1,0 +1,74 @@
+package.json
+postcss.config.mjs
+[public]
+    ├── loginImage.svg
+    ├── next.svg
+    └── vercel.svg
+README.md
+[src]
+    ├── [app]
+        ├── [auth]
+            ├── [forgotpassword]
+                └── page.tsx
+            ├── [signin]
+                └── page.tsx
+            └── [signup]
+                └── page.tsx
+        ├── favicon.ico
+        ├── globals.css
+        ├── layout.tsx
+        ├── page.tsx
+        └── [quiz]
+            └── page.tsx
+    ├── [components]
+        ├── [auth]
+            ├── [signin]
+                └── SignInComponent.tsx
+            └── [signup]
+                └── SignUpComponent.tsx
+        ├── [home]
+            └── [menu]
+                └── MenuHome.tsx
+        ├── Loader.tsx
+        ├── [menu]
+            └── Menu.tsx
+        ├── [questions]
+            ├── Question.tsx
+            ├── questions.ts
+            ├── Questions.tsx
+            ├── teste.json
+            └── teste.py
+        ├── ReactQueryClientProvider.tsx
+        ├── theme-provider.tsx
+        ├── toggle-theme.tsx
+        ├── [ui]
+            ├── button.tsx
+            ├── card.tsx
+            ├── dropdown-menu.tsx
+            ├── form.tsx
+            ├── input.tsx
+            └── label.tsx
+        └── [user]
+            └── User.tsx
+    ├── [hooks]
+        ├── isAuthenticated.ts
+        └── use-supabase.ts
+    ├── [lib]
+        └── utils.ts
+    ├── [queries]
+    └── [utils]
+        ├── database.types.ts
+        └── supabase.ts
+[supabase]
+    ├── .gitignore
+    ├── [.temp]
+        ├── gotrue-version
+        ├── pooler-url
+        ├── postgres-version
+        ├── project-ref
+        ├── rest-version
+        └── storage-version
+    ├── config.toml
+    └── seed.sql
+tailwind.config.ts
+tsconfig.json
