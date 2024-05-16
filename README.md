@@ -1,4 +1,125 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📌 Overview
+
+This project is a simple quiz site called quizUp, built using NextJs with supabase. The objective is to create a question application where the user can answer several questions, resulting in a right or wrong answer. QuizUp is a project built with Next.js and Tailwind on the Frontend, supabase for database storage on the Backend. A bonus feature of the app is the dark mode option.
+
+# 📝 Requirements
+
+-   Node.js (version 20)
+
+# 🔍Technologies
+
+-   **Next.js** for building the user interface.
+-   **Tailwind** CSS for styling.
+-   **TypeScript** for type safety.
+-   **Supabase** open-source database platform.
+
+# 📁 Project Structure
+
+```
+├── .next
+├── .vercel
+├── node_modules
+├── package.json
+├── postcss.config.mjs
+├── [public]
+│    ├── loginImage.svg
+│    ├── next.svg
+│    └── vercel.svg
+├── README.md
+├── [src]
+│    ├── [app]
+│    │    ├── [auth]
+│    │        ├── [forgotpassword]
+│    │            └── page.tsx
+│    │        ├── [signin]
+│    │            └── page.tsx
+│    │        └── [signup]
+│    │            └── page.tsx
+│    │    ├── favicon.ico
+│    │    ├── globals.css
+│    │    ├── layout.tsx
+│    │    ├── page.tsx
+│    │    └── [quiz]
+│    │        └── page.tsx
+│    ├── [components]
+│    │    ├── [auth]
+│    │        ├── [signin]
+│    │            └── SignInComponent.tsx
+│    │        └── [signup]
+│    │            └── SignUpComponent.tsx
+│    │    ├── [home]
+│    │        └── [menu]
+│    │            └── MenuHome.tsx
+│    │    ├── Loader.tsx
+│    │    ├── [menu]
+│    │        └── Menu.tsx
+│    │    ├── [questions]
+│    │        ├── Question.tsx
+│    │        ├── questions.ts
+│    │        ├── Questions.tsx
+│    │        ├── teste.json
+│    │        └── teste.py
+│    │    ├── ReactQueryClientProvider.tsx
+│    │    ├── theme-provider.tsx
+│    │    ├── toggle-theme.tsx
+│    │    ├── [ui]
+│    │        ├── button.tsx
+│    │        ├── card.tsx
+│    │        ├── dropdown-menu.tsx
+│    │        ├── form.tsx
+│    │        ├── input.tsx
+│    │        └── label.tsx
+│    │    └── [user]
+│    │        └── User.tsx
+│    ├── [hooks]
+│    │    ├── isAuthenticated.ts
+│    │    └── use-supabase.ts
+│    ├── [lib]
+│    │    └── utils.ts
+│    ├── [queries]
+│    └── [utils]
+│    │    ├── database.types.ts
+│    │    └── supabase.ts
+[supabase]
+│    ├── .gitignore
+│    ├── [.temp]
+│    │    ├── gotrue-version
+│    │    ├── pooler-url
+│    │    ├── postgres-version
+│    │    ├── project-ref
+│    │    ├── rest-version
+│    │    └── storage-version
+│    ├── config.toml
+│    └── seed.sql
+├── tailwind.config.ts
+├── tsconfig.json
+```
+
+# 📝 Project Summary
+
+-   [.next]: Contains Next.js build artifacts and configuration.
+-   [.vercel]: Vercel deployment configuration and metadata.
+-   [node_modules]: Node.js dependencies installed by npm or yarn.
+-   [public]: Publicly accessible assets like images and favicon.
+-   [src]: Source code directory for the project.
+    -   [src\app]: Application-specific code and components.
+    -   [src\app\api\trpc[trpc]]: tRPC API routes and configurations.
+    -   [src\app\components]: Reusable React components.
+    -   [src\app\pages]: React pages for different views.
+    -   [src\app\types]: TypeScript type definitions.
+    -   [src\app\layout.tsx]: Main layout component.
+    -   [src\app\page.tsx]: Base page component.
+    -   [src\assets]: Project assets like images and fonts.
+    -   [src\env.js]: Environment configuration file.
+
+*   [.env and .env.example]: Environment variable configuration.
+*   [.eslintrc.cjs and .gitignore]: ESLint configuration and Git ignore rules.
+*   [next-env.d.ts and next.config.js]: Next.js environment declarations and configuration.
+*   [package-lock.json and package.json]: Node.js package manager files.
+*   [postcss.config.cjs and prettier.config.js]: PostCSS and Prettier configuration.
+*   [tailwind.config.ts]: Tailwind CSS configuration.
+*   [tsconfig.json]: TypeScript configuration file.
+*   [vercel.json]: Vercel deployment configuration.
 
 ## Getting Started
 
@@ -16,21 +137,54 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📷 Screenshots
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+![App Screenshot](https://imgur.com/hmGNgdY.png)
 
-## Learn More
+![App Screenshot](https://imgur.com/y6E2Kmo.png)
 
-To learn more about Next.js, take a look at the following resources:
+![App Screenshot](https://imgur.com/sWakt6U.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![App Screenshot](https://imgur.com/JCPX5l2.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![App Screenshot](https://imgur.com/hID32mP.png)
 
-## Deploy on Vercel
+![App Screenshot](https://imgur.com/oIyakBJ.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Dark Mode
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![App Screenshot](https://imgur.com/H1jFEhJ.png)
+
+![App Screenshot](https://imgur.com/phGSqIS.png)
+
+![App Screenshot](https://imgur.com/eZ8DNCJ.png)
+
+![App Screenshot](https://imgur.com/qNPnAy7.png)
+
+![App Screenshot](https://imgur.com/cqkiowy.png)
+
+![App Screenshot](https://imgur.com/3tE3RWt.png)
+
+# Responsive Design
+
+![App Screenshot](https://imgur.com/CEFUkmR.png)
+
+![App Screenshot](https://imgur.com/ou7FZAW.png)
+
+![App Screenshot](https://imgur.com/5vPmR9n.png)
+
+![App Screenshot](https://imgur.com/niMwbNg.png)
+
+# Responsive Dark Mode
+
+![App Screenshot](https://imgur.com/JU99i1G.png)
+
+![App Screenshot](https://imgur.com/6Glas4W.png)
+
+![App Screenshot](https://imgur.com/DMwCEV3.png)
+
+![App Screenshot](https://imgur.com/ZloVvrB.png)
+
+![App Screenshot](https://imgur.com/UzEzdfB.png)
+
+![App Screenshot](https://imgur.com/iAz5xOf.png)
